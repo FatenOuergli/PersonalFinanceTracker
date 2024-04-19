@@ -12,7 +12,7 @@
     />
     <script src="testingJS.js"></script>
   </head>
-  <body>
+  <body onload="loadExpenses();loadIncomes();">
     <header>
       <div class="dashboard">
         <img
@@ -71,15 +71,15 @@
               </tr>
               <tr>
                 <td>Bank Account</td>
-                <td>4090 DT</td>
+                <td id="bankAccount_networth">4090 DT</td>
               </tr>
               <tr>
                 <td>Savings</td>
-                <td>1250 DT</td>
+                <td id="savings_networth">1250 DT</td>
               </tr>
               <tr>
                 <td>Credits</td>
-                <td style="color: red">50 DT</td>
+                <td id="credits_networth" style="color: red">50 DT</td>
               </tr>
             </table>
           </div>
@@ -91,7 +91,7 @@
           </button>
 
           <div id="newtransactions">
-            <form>
+            <form onsubmit="updateExpense(event)">
               <table style="font-weight: bold">
                 <tr>
                   <th><b>Amount</b></th>
@@ -121,8 +121,6 @@
                 <tr>
                   <td colspan="2">
                     <button
-                      type="submit"
-                      onclick="updateExpense(event)"
                       onmouseover="this.style.backgroundColor='#548f56';"
                       onmouseout="this.style.backgroundColor='#ffffff';"
                     >
@@ -132,12 +130,13 @@
                 </tr>
               </table>
             </form>
-            <form>
+            <form onsubmit="updateIncome(event)">
               <table style="font-weight: bold">
                 <tr>
                   <th><b>Amount</b></th>
                   <td>
                     <input
+                      required
                       type="number"
                       id="amount_income"
                       placeholder="Enter Amount"
@@ -146,13 +145,13 @@
                 </tr>
                 <tr>
                   <th>Date</th>
-                  <td><input type="date" id="date_income" /></td>
+                  <td><input required type="date" id="date_income" /></td>
                 </tr>
                 <tr>
                   <th>Category</th>
                   <td>
                     <select id="category_income">
-                      <option value="Savings">Savings</option>
+                      <option value="Savings" selected>Savings</option>
                       <option value="banAccount">Bank Account</option>
                       <option value="Credits">Credits</option>
                     </select>
@@ -162,8 +161,6 @@
                 <tr>
                   <td colspan="2">
                     <button
-                      type="button"
-                      onclick="updateIncome(event)"
                       onmouseover="this.style.backgroundColor='#548f56';"
                       onmouseout="this.style.backgroundColor='#ffffff';"
                     >
