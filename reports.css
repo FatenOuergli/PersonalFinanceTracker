@@ -1,0 +1,59 @@
+#img1 {
+  width: 7.5%;
+  height: 7.5%;
+}
+#img2 {
+  width: 50%;
+  height: 50%;
+}
+#img3 {
+  width: 50%;
+  height: 50%;
+}
+#img4 {
+  width: 50%;
+  height: 50%;
+}
+#img5 {
+  width: 50%;
+  height: 50%;
+}
+
+.box {
+  align-items: center;
+  cursor: pointer;
+}
+.box:hover {
+  color: lightblue;
+}
+.box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 670px;
+  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+  background-color: #548f56;
+  width: 50%;
+}
+.mainstuff {
+  padding: 10px;
+  float: left;
+  height: 100%;
+  width: 100px;
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+}

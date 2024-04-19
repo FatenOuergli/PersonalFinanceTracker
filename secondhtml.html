@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="secondmain.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="F:\HTML\projectEYY\moneysecond.ico"
+    />
+    <script src="testingJS.js"></script>
+   
+
+  
+  </head>
+  <body>
+    <header>
+      <div class="dashboard">
+        <img
+          src="C:\Users\hp\Desktop\TP VHDL\moneysign.png"
+          alt="moneysign"
+          id="img1"
+        />
+        <nav>
+          <h1>Dashboard</h1>
+        </nav>
+      </div>
+    </header>
+
+    <div class="mainstuff">
+      <div class="box" onclick="location.href='secondhtml.html';">
+        <img
+          src="C:\Users\hp\Desktop\TP VHDL\dashboard.png"
+          alt="Image 1"
+          id="img2"
+        />
+        <p>Dashboard</p>
+      </div>
+      <div class="box" onclick="location.href='accounts.html';">
+        <img
+          src="C:\Users\hp\Desktop\TP VHDL\accounts.png"
+          alt="Image 2"
+          id="img3"
+        />
+        <p>Accounts</p>
+      </div>
+
+      <div class="box" onclick="window.location.href='reports.html';">
+        <img
+          src="C:\Users\hp\Desktop\TP VHDL\reports.png"
+          alt="Image 3"
+          id="img4"
+        />
+        <p>Reports</p>
+      </div>
+      <div class="box" onclick="window.location.href='settings.html';" id="stg">
+        <img src="C:\Users\hp\Downloads\settings.png" alt="Image4" id="img5" />
+        <p>Settings</p>
+      </div>
+    </div>
+    <section>
+
+
+      <div class="dashboard1">
+        <div class="transactionss">
+          <button id="dashboardtrans1" onclick="hideShow('networth')">
+            <span><h3>▼ NET WORTH</h3></span>
+          </button>
+          <div  id="networth">
+          <table style="font-weight: bold;">
+            <tr>
+              <th>Category</th>
+              <th>Amount</th>
+            </tr>
+            <tr>
+              <td>Bank Account</td>
+              <td>4090 DT</td>
+            </tr>
+            <tr>
+              <td>Savings</td>
+              <td>1250 DT</td>
+            </tr>
+            <tr>
+              <td>Credits</td>
+              <td style="color: red;">50 DT</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      
+      <div class="transactionss">
+          <button id="dashboardtrans2" onclick="hideShow('newtransactions')">
+            <span><h3>▼ NEW TRANSACTION</h3></span>
+        </button>
+      
+      <div id="newtransactions">
+          <form>
+          <table style="font-weight: bold;">
+            <tr>
+              <th> <b>Amount</b></th>
+              <td> <input
+                  type="number"
+                  id="description"
+                  placeholder="Enter Amount"
+              /></td>
+                </tr>
+            <tr>
+              <th>Date</th>
+              <td><input type="date" id="date"/></td>
+            </tr>
+            <tr>
+              <th>Category</th>
+              <td><input type="text" id="note" placeholder="Note"></td>
+            </tr>
+            <tr>
+    
+
+<td colspan="2"> <button type="submit" onclick="update()" ;" onmouseover="this.style.backgroundColor='#548f56';" onmouseout="this.style.backgroundColor='#ffffff';"><b>Add Expense</b></button></td>
+</tr>
+          </form>
+        </table>
+        <form >
+          <table style="font-weight: bold;">
+            <tr>
+              <th> <b>Amount</b></th>
+              <td> <input
+                  type="number"
+                  id="amount"
+                  placeholder="Enter Amount"
+              /></td>
+                </tr>
+            <tr>
+              <th>Date</th>
+              <td><input type="date" id="Date"></td>
+            </tr>
+              <tr>
+                <th>Note</th>
+              <td>
+                <select id="Category">
+                  <option value="Savings">Savings</option>
+                  <option value="banAccount">Bank Account</option>
+                  <option value="Credits">Credits</option>
+                </select></td>
+            </tr>
+            
+              
+           
+            <tr>
+    
+
+<td colspan="2"> <button type="button"  onclick="update()"  ;" onmouseover="this.style.backgroundColor='#548f56';" onmouseout="this.style.backgroundColor='#ffffff';"><b>Add Income</b></button></td>
+</tr>
+          </form>
+        </table>
+      </div>
+    </div>
+      <div class="transactionss">
+        <button  id="dashboardtrans3" onclick="hideShow('recenttrans')">
+          <span><h3>▼ RECENT TRANSACTIONS</h3></span>
+        </button>
+        <b><div id="recenttransaction" >
+  
+        </div></b>
+      </div>
+      </div>
+    </section>
+  </body>
+</html>

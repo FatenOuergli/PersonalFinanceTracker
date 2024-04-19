@@ -1,0 +1,127 @@
+#img1 {
+  width: 7.5%;
+  height: 7.5%;
+}
+#img2 {
+  width: 50%;
+  height: 50%;
+}
+#img3 {
+  width: 50%;
+  height: 50%;
+}
+#img4 {
+  width: 50%;
+  height: 50%;
+}
+#img5 {
+  width: 50%;
+  height: 50%;
+}
+
+.box {
+  align-items: center;
+  cursor: pointer;
+}
+.box:hover {
+  color: lightblue;
+}
+.box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 670px;
+  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+  background-color: #548f56;
+  width: 50%;
+}
+.mainstuff {
+  padding: 10px;
+  float: left;
+  height: 100%;
+  width: 100px;
+  box-sizing: border-box;
+  margin-top: 0px;
+  border: 1px solid #548f56;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+}
+
+#networth,
+#newtransactions,
+#recenttrans {
+  border: 1px solid #ccc;
+  padding: 10px;
+  padding-right: -50px;
+  width: 300px;
+  margin-top: 0px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.dashboard1 {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+}
+section {
+  border: 1px solid #548f56;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: inline-block;
+  width: 1150px;
+  margin-left: 70px;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.dashboard1 {
+  display: flex;
+  justify-content: space-between;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0.5px solid black;
+  border-radius: 5px;
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px dashed black;
+}
+th {
+  background-color: #f2f2f2;
+}
+#dashboardtrans1,
+#dashboardtrans2,
+#dashboardtrans3 {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
