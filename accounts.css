@@ -18,6 +18,15 @@
   width: 50%;
   height: 50%;
 }
+.dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 670px;
+  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+  background-color: #548f56;
+  width: 50%;
+}
 
 .box {
   align-items: center;
@@ -56,4 +65,48 @@ body {
   padding: 0px;
   height: 100%;
   font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+}
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.container {
+  border: 1px solid #548f56;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: inline-block;
+  width: 700px;
+  margin-left: 70px;
+  margin-top: 0;
+  padding: 5px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 50%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-group button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: #0056b3;
 }
