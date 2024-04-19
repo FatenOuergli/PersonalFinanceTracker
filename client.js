@@ -1,4 +1,5 @@
 // Function to toggle visibility of the specified element
+//Hello github
 const hideShow = (elementId) => {
   const element = document.getElementById(elementId);
 
