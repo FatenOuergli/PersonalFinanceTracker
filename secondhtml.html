@@ -11,9 +11,6 @@
       href="F:\HTML\projectEYY\moneysecond.ico"
     />
     <script src="testingJS.js"></script>
-   
-
-  
   </head>
   <body>
     <header>
@@ -61,109 +58,134 @@
       </div>
     </div>
     <section>
-
-
       <div class="dashboard1">
         <div class="transactionss">
           <button id="dashboardtrans1" onclick="hideShow('networth')">
             <span><h3>▼ NET WORTH</h3></span>
           </button>
-          <div  id="networth">
-          <table style="font-weight: bold;">
-            <tr>
-              <th>Category</th>
-              <th>Amount</th>
-            </tr>
-            <tr>
-              <td>Bank Account</td>
-              <td>4090 DT</td>
-            </tr>
-            <tr>
-              <td>Savings</td>
-              <td>1250 DT</td>
-            </tr>
-            <tr>
-              <td>Credits</td>
-              <td style="color: red;">50 DT</td>
-            </tr>
-          </table>
+          <div id="networth">
+            <table style="font-weight: bold">
+              <tr>
+                <th>Category</th>
+                <th>Amount</th>
+              </tr>
+              <tr>
+                <td>Bank Account</td>
+                <td>4090 DT</td>
+              </tr>
+              <tr>
+                <td>Savings</td>
+                <td>1250 DT</td>
+              </tr>
+              <tr>
+                <td>Credits</td>
+                <td style="color: red">50 DT</td>
+              </tr>
+            </table>
+          </div>
         </div>
-      </div>
-      
-      <div class="transactionss">
+
+        <div class="transactionss">
           <button id="dashboardtrans2" onclick="hideShow('newtransactions')">
             <span><h3>▼ NEW TRANSACTION</h3></span>
-        </button>
-      
-      <div id="newtransactions">
-          <form>
-          <table style="font-weight: bold;">
-            <tr>
-              <th> <b>Amount</b></th>
-              <td> <input
-                  type="number"
-                  id="description"
-                  placeholder="Enter Amount"
-              /></td>
-                </tr>
-            <tr>
-              <th>Date</th>
-              <td><input type="date" id="date"/></td>
-            </tr>
-            <tr>
-              <th>Category</th>
-              <td><input type="text" id="note" placeholder="Note"></td>
-            </tr>
-            <tr>
-    
+          </button>
 
-<td colspan="2"> <button type="submit" onclick="update()" ;" onmouseover="this.style.backgroundColor='#548f56';" onmouseout="this.style.backgroundColor='#ffffff';"><b>Add Expense</b></button></td>
-</tr>
-          </form>
-        </table>
-        <form >
-          <table style="font-weight: bold;">
-            <tr>
-              <th> <b>Amount</b></th>
-              <td> <input
-                  type="number"
-                  id="amount"
-                  placeholder="Enter Amount"
-              /></td>
+          <div id="newtransactions">
+            <form>
+              <table style="font-weight: bold">
+                <tr>
+                  <th><b>Amount</b></th>
+                  <td>
+                    <input
+                      required
+                      type="number"
+                      id="amount_expense"
+                      placeholder="Enter Amount"
+                    />
+                  </td>
                 </tr>
-            <tr>
-              <th>Date</th>
-              <td><input type="date" id="Date"></td>
-            </tr>
-              <tr>
-                <th>Note</th>
-              <td>
-                <select id="Category">
-                  <option value="Savings">Savings</option>
-                  <option value="banAccount">Bank Account</option>
-                  <option value="Credits">Credits</option>
-                </select></td>
-            </tr>
-            
-              
-           
-            <tr>
-    
+                <tr>
+                  <th>Date</th>
+                  <td><input required type="date" id="date_expense" /></td>
+                </tr>
+                <tr>
+                  <th>Category</th>
+                  <td>
+                    <select id="category_expense">
+                      <option value="Savings" selected>Savings</option>
+                      <option value="banAccount">Bank Account</option>
+                      <option value="Credits">Credits</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <button
+                      type="submit"
+                      onclick="updateExpense(event)"
+                      onmouseover="this.style.backgroundColor='#548f56';"
+                      onmouseout="this.style.backgroundColor='#ffffff';"
+                    >
+                      <b>Add Expense</b>
+                    </button>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <form>
+              <table style="font-weight: bold">
+                <tr>
+                  <th><b>Amount</b></th>
+                  <td>
+                    <input
+                      type="number"
+                      id="amount_income"
+                      placeholder="Enter Amount"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Date</th>
+                  <td><input type="date" id="date_income" /></td>
+                </tr>
+                <tr>
+                  <th>Category</th>
+                  <td>
+                    <select id="category_income">
+                      <option value="Savings">Savings</option>
+                      <option value="banAccount">Bank Account</option>
+                      <option value="Credits">Credits</option>
+                    </select>
+                  </td>
+                </tr>
 
-<td colspan="2"> <button type="button"  onclick="update()"  ;" onmouseover="this.style.backgroundColor='#548f56';" onmouseout="this.style.backgroundColor='#ffffff';"><b>Add Income</b></button></td>
-</tr>
-          </form>
-        </table>
-      </div>
-    </div>
-      <div class="transactionss">
-        <button  id="dashboardtrans3" onclick="hideShow('recenttrans')">
-          <span><h3>▼ RECENT TRANSACTIONS</h3></span>
-        </button>
-        <b><div id="recenttransaction" >
-  
-        </div></b>
-      </div>
+                <tr>
+                  <td colspan="2">
+                    <button
+                      type="button"
+                      onclick="updateIncome(event)"
+                      onmouseover="this.style.backgroundColor='#548f56';"
+                      onmouseout="this.style.backgroundColor='#ffffff';"
+                    >
+                      <b>Add Income</b>
+                    </button>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </div>
+        <div class="transactionss">
+          <button id="dashboardtrans3" onclick="hideShow('recenttrans')">
+            <span><h3>▼ RECENT TRANSACTIONS</h3></span>
+          </button>
+          <b>
+            <h4>Expenses:</h4>
+            <div id="expenses"></div>
+            <h4>Incomes:</h4>
+            <div id="incomes"></div
+          ></b>
+        </div>
       </div>
     </section>
   </body>
